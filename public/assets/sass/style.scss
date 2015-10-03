@@ -1,0 +1,313 @@
+@import "compass";
+@import "compass/reset/";
+
+$font-color: #666;
+$error-font-color: #f00;
+$bg-color: #99F;
+$main-font-size: 14px;
+$title-font-size: 26px;
+$main-width: 100%;
+
+html{
+  height: 100%;
+  font-family: Meiryo , sans-serif;
+}
+
+body{
+  color: $font-color;
+  font-size: $main-font-size;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+
+a:hover{
+  opacity: 0.6;
+}
+
+header{
+  @include clearfix;
+  img{
+    float: left;
+    background-color: #fff;
+    margin-right: 10px;
+  }
+
+  li > a{
+    float: left;
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+  }
+  padding: 1px 10%;
+  background-color: $bg-color;
+}
+
+.container{
+  width: $main-width;
+  height: 100%;
+  margin:   0px auto;
+}
+
+section{
+  padding: 20px 0px;
+  min-height: 70%;
+}
+
+h1{
+  font-size: $title-font-size;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+h2{
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer{
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: $bg-color;
+  padding: 10px;
+  div{
+    padding-bottom: 10px;
+  }
+  a{
+    color: #fff;
+  }
+}
+
+button{
+  cursor: pointer;
+  display: block;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+.normal-button{
+  display: block;
+  text-align: center;
+  border: none;
+  background-color: $bg-color;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.logout{
+  float: right;
+  margin-right: 1px;
+}
+
+label{
+  display: block;
+  float: left;
+  width: 150px;
+  height: 30px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+input{
+  color: $font-color;
+  width: 300px;
+  height: 20px;
+}
+
+select{
+  color: $font-color;
+}
+
+textarea{
+  color: $font-color;
+}
+
+.normal-form{
+  width: 600px;
+  margin: 20px auto;
+  fieldset{
+    margin: 10px;
+  }
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.error{
+  text-align: center;
+  color: $error-font-color;
+  padding: 10px;
+}
+
+.create_button{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border: dotted $font-color 1px;
+  width: 150px;
+  height: 30px;
+  margin: 20px auto;
+  line-height: 30px;
+}
+
+.normal-table{
+  margin: 20px auto;
+  th{
+    border: solid #ccc 1px;
+    width: 200px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: $bg-color;
+    color: #fff;
+    text-align: center;
+  }
+  td{
+    border: solid #ccc 1px;
+    padding: 10px;
+  }
+  .small{
+    width: 50px;
+  }
+  .middle{
+    width: 50px;
+  }
+}
+
+.normal-textarea{
+  width: 300px;
+  height: 300px;
+}
+
+.center{
+  text-align: center;
+}
+
+.topic{
+  div{
+    border: solid $bg-color 1px;
+    padding: 5px;
+  }
+  width: 48%;
+  float: right;
+}
+
+section{
+  @include clearfix;
+}
+
+.content_box{
+  border: solid $bg-color 1px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topic_list{
+  text-align: center;
+
+  li{
+    height: 30px;
+  }
+}
+
+.pagination{
+  @include clearfix;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  display: table;
+  li{
+    width: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+.header_user > a{
+  font-size: 18px;
+  float: right;
+  width: 300px;
+  text-align: right;
+  margin-right: 50px;
+  color: #fff;
+  background-color: $bg-color;
+}
+
+h3{
+  text-align: center;
+  margin: 25px auto 10px auto;
+  border-bottom: 1px solid $bg-color;
+  padding-bottom: 5px;
+}
+
+.policy{
+  width: 800px;
+  margin: 20px auto;
+
+  .over{
+    margin-top: 30px;
+    text-align: right;
+  }
+}
+
+.company{
+  width: 500px;
+  margin: 0 auto;
+
+  tr{
+    height: 30px;
+  }
+
+  td,th{
+    padding: 20px;
+    border: solid 1px #ccc;
+  }
+
+  th{
+    background-color: $bg-color;
+    color: #fff;
+  }
+}
+
+.big-button{
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  background-color: $bg-color;
+  color: #fff;
+  border: none;
+  text-align: center;
+}
+
+.prof_table{
+  width: 300px;
+  margin: 20px auto;
+  th{
+    width: 100px;
+    background-color: $bg-color;
+    color: #fff;
+  }
+
+  th,td{
+    padding: 10px;
+    border: solid 1px #ccc;
+  }
+}
