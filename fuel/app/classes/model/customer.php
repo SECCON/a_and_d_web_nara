@@ -30,6 +30,15 @@ class Model_Customer extends \Orm\Model
 		),
 	);
 
+	protected static $_belongs_to = array(
+		'user' => array(
+			'model_to' => 'Model_User',
+			'key_from' => 'user_id',
+			'key_to'   => 'id',
+			'cascade_delete' => false,
+		),
+	);
+
 	protected static $_table_name = 'customers';
 
 	public function safeDelete()
