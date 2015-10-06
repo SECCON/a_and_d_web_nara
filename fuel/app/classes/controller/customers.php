@@ -16,7 +16,8 @@ class Controller_Customers extends Controller_Users
 
 		$count = Model_Customer::count([
 			"where" => [
-				["deleted_at", 0]
+				["deleted_at", 0],
+				["user_id", $this->template->user->id]
 			]
 		]);
 
