@@ -44,7 +44,7 @@ class Controller_Admin_Signin extends Controller_Base
 
 				Cookie::set("ad_user", $user->login_hash);
 
-				Response::redirect('/');
+				Response::redirect('/admin');
 			}
 		}
 	}

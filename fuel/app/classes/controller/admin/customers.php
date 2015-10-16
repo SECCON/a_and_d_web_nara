@@ -2,6 +2,20 @@
 
 class Controller_Admin_Customers extends Controller_Base
 {
+	public function before()
+	{
+		parent::before();
+		$this->template = View::forge("admin/template");
+
+		$this->template->user = Model_User::find("first", [
+			"where" => [
+				["login_hash", Cookie::get("ad_user")],
+				["deleted_at", 0],
+				["group_id", 100]
+			]
+		]);
+
+	}
 
 	public function action_index()
 	{
