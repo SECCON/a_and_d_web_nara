@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?= $title; ?>　｜　エーアンドディー株式会社</title>
+	<title><?= $title; ?>　｜　<?= __("com_name"); ?></title>
 	<?= Asset::css('style.css'); ?>
 </head>
 <body>
@@ -13,11 +13,11 @@
 
 		<ul>
 			<?php if($user != null): ?>
-				<li><a href="/admin/topics">お知らせ一覧</a></li>
-				<li><a href="/admin/users">ユーザ一覧</a></li>
-				<li><a href="/admin/customers">顧客一覧</a></li>
-				<li><a href="/admin/inquiries">お問い合せ一覧</a></li>
-				<li class="logout"><a href="/admin/?logout=1">ログアウト</a></li>
+				<li><a href="/admin/topics"><?= __("topics"); ?></a></li>
+				<li><a href="/admin/users"><?= __("users"); ?></a></li>
+				<li><a href="/admin/customers"><?= __("customers"); ?></a></li>
+				<li><a href="/admin/inquiries"><?= __("inquiry"); ?></a></li>
+				<li class="logout"><a href="/admin/?logout=1"><?= __("signout"); ?></a></li>
 			<?php endif; ?>
 		</ul>
 	</header>
@@ -26,7 +26,7 @@
 		<?= $content; ?>
 	</section>
 	<footer>
-		<p>Copyright 2015 エーアンドディー株式会社 All rights reserved.</p>
+		<p>Copyright 2015 <?= __("com_name"); ?> All rights reserved.</p>
 	</footer>
 </div>
 </body>

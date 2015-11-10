@@ -2,10 +2,10 @@
 	<table class="normal-table">
 		<tr>
 			<th class="small">ID</th>
-			<th>登録ユーザ</th>
-			<th>なまえ<br>名前</th>
-			<th>メールアドレス<br>電話番号</th>
-			<th>作成日</th>
+			<th><?= __("user"); ?></th>
+			<th><?= __("kana"); ?><br><?= __("name"); ?></th>
+			<th><?= __("email"); ?><br>TEL</th>
+			<th><?= __("created_datetime"); ?></th>
 			<th class="middle"></th>
 		</tr>
 		<?php foreach($customers as $customer): ?>
@@ -14,8 +14,8 @@
 			<td><?= $customer->user->name; ?></td>
 			<td><?= $customer->kana; ?><br><?= $customer->name; ?></td>
 			<td><?= $customer->email; ?><br><?= $customer->tel; ?></td>
-			<td><?= Date("Y/m/d H:i:s", $customer->created_at); ?></td>
-			<td><a class="normal-button" href="/admin/customers/detail/<?= $customer->id; ?>">詳細</a></td>
+			<td><?= Date(__("datetime_style"), $customer->created_at); ?></td>
+			<td><a class="normal-button" href="/admin/customers/detail/<?= $customer->id; ?>"><?= __("detail"); ?></a></td>
 		</tr>
 		<?php endforeach; ?>
 	</table>

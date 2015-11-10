@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?= $title; ?>　｜　エーアンドディー株式会社</title>
+	<title><?= $title; ?>　｜　<?= __("com_name"); ?></title>
 	<?= Asset::css('style.css'); ?>
 </head>
 <body>
@@ -19,18 +19,18 @@
 
 		<ul>
 			<?php if($user != null): ?>
-				<li><a href="/top">トップ</a></li>
-				<li><a href="/topics">お知らせ一覧</a></li>
-				<li><a href="/customers">顧客一覧</a></li>
-				<li><a href="/log">アクセスログ</a></li>
-				<li class="logout"><a href="/?logout=1">ログアウト</a></li>
+				<li><a href="/top"><?= __("top"); ?></a></li>
+				<li><a href="/topics"><?= __("topics"); ?></a></li>
+				<li><a href="/customers"><?= __("customers"); ?></a></li>
+				<li><a href="/log"><?= __("access_log"); ?></a></li>
+				<li class="logout"><a href="/?logout=1"><?= __("signout"); ?></a></li>
 				<li class="header_user"><a href="/setting"><?= $user->name; ?></a></li>
 			<?php else: ?>
 				<li class="logout">
-					<a href="/signin">ログイン</a>
+					<a href="/signin"><?= __("signin"); ?></a>
 				</li>
 				<li class="logout">
-					<a href="/signup">ユーザ登録</a>
+					<a href="/signup"><?= __("signup"); ?></a>
 				</li>
 			<?php endif; ?>
 		</ul>
@@ -40,8 +40,8 @@
 		<?= $content; ?>
 	</section>
 	<footer>
-		<div><a href="/policy">プライバシーポリシー</a> | <a href="/term">利用規約</a> | <a href="/company">会社概要</a> | <a href="/inquiry">お問い合わせ</a></div>
-		<p>Copyright 2015 エーアンドディー株式会社 All rights reserved.</p>
+		<div><a href="/policy"><?= __("policy"); ?></a> | <a href="/term"><?= __("term"); ?></a> | <a href="/company"><?= __("company"); ?></a> | <a href="/inquiry"><?= __("inquiry"); ?></a></div>
+		<p>Copyright 2015 <?= __("com_name"); ?> All rights reserved.</p>
 	</footer>
 </div>
 </body>

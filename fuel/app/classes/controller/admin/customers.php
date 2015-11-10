@@ -56,7 +56,7 @@ class Controller_Admin_Customers extends Controller_Base
 
 		]);
 
-		$this->template->title = '顧客一覧';
+		$this->template->title = __("customers");
 		$this->template->content = View::forge('admin/customers/index', $this->data);
 	}
 
@@ -79,7 +79,7 @@ class Controller_Admin_Customers extends Controller_Base
 
 		}
 
-		$this->template->title = '顧客詳細';
+		$this->template->title = __("customer");
 		$this->template->content = View::forge('admin/customers/detail', $this->data);
 	}
 }

@@ -27,7 +27,7 @@ class Controller_Log extends Controller_Users
 
 		]);
 
-		$this->template->title = 'アクセスログ';
+		$this->template->title = __("access_log");
 		$view = View::forge('log', $this->data);
 		$view->set_safe("logs", $logs);
 		$this->template->content = $view;

@@ -15,7 +15,7 @@ class Controller_top extends Controller_Users
 			"limit" => 5
 		]);
 
-		$this->template->title = 'トップ';
+		$this->template->title = __("top");
 		$this->template->content = View::forge('top', $this->data);
 	}
 }

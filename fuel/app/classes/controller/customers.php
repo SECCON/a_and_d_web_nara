@@ -44,7 +44,7 @@ class Controller_Customers extends Controller_Users
 
 		]);
 
-		$this->template->title = '顧客一覧';
+		$this->template->title = __("customers");
 		$this->template->content = View::forge('customers/index', $this->data);
 	}
 
@@ -63,11 +63,11 @@ class Controller_Customers extends Controller_Users
 			$customer = Model_Customer::forge();
 			$customer->user_id = $this->template->user->id;
 
-			$this->template->title = '顧客登録';
+			$this->template->title = __("create");
 		}
 		else
 		{
-			$this->template->title = '顧客更新';
+			$this->template->title = __("edit");
 		}
 
 		if(Input::post("email", null) !== null && Security::check_token())

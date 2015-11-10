@@ -22,3 +22,14 @@ require COREPATH.'bootstrap.php';
 
 // Initialize the framework with the config file.
 \Fuel::init('config.php');
+
+$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+if(isset($languages[0]) && preg_match('/^en/i', $languages[0]))
+{
+	Config::set('language', 'en');
+}
+else
+{
+	Config::set('language', 'ja');
+}
+Lang::load('main');

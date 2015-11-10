@@ -1,6 +1,5 @@
-<h2>サービス内容</h2>
-<p class="content_box">本サービスは、お客様の顧客リストを<br>
-	簡単に管理できる画期的なサービスです！<br>
-	下の会員登録からぜひ使ってみて下さい！
+<h2><?= __("service"); ?></h2>
+<p class="content_box">
+	<?= __("service_text"); ?>
 </p>
-<a href="/signup" class="big-button">会員登録はこちら！</a>
+<a href="/signup" class="big-button"><?= __("to_signup"); ?></a>

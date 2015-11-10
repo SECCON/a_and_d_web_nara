@@ -33,7 +33,7 @@ class Controller_Admin_Topics extends Controller_Admin
 
 		]);
 
-		$this->template->title = 'お知らせ';
+		$this->template->title = __("topics");
 		$this->template->content = View::forge('admin/topics/index', $this->data);
 	}
 
@@ -47,12 +47,12 @@ class Controller_Admin_Topics extends Controller_Admin
 
 		if($topic == null)
 		{
-			$this->template->title = 'お知らせ　作成';
+			$this->template->title = __("create");
 			$topic = Model_Topic::forge();
 		}
 		else
 		{
-			$this->template->title = 'お知らせ　編集';
+			$this->template->title = __("edit");
 		}
 
 		if(Input::post("title", null) !== null && Security::check_token())
